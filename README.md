@@ -46,7 +46,3 @@ Assign a constant value or expression to a variable.
 Place a script.namx file inside the assets/ folder of your project.
 
 The engine will load and run the script each frame, updating the controlled object's position accordingly.
-
-Modify speed to adjust movement speed.
-
-Use conditional statements to react to key presses.
