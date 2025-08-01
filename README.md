@@ -1,4 +1,4 @@
-# Namling Engine
+# Namling Engine v1.1
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Maze and Collect modes
