@@ -1,0 +1,14 @@
+dx = mouse_x - x
+dy = mouse_y - y
+x = x + dx * 0.05
+y = y + dy * 0.05
+
+box0_x = 300
+box0_y = 200
+box0_w = 60
+box0_h = 60
+box0_color = 1
+
+box1_x = 500
+box1_y = 400
+box1_color = 2
