@@ -1,4 +1,4 @@
-# Namling Engine v1.4
+# Namling Engine v1.5
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
@@ -43,6 +43,6 @@ Assign a constant value or expression to a variable.
 
 
 
-Place a script.namx file inside the assets/ folder of your project. (example script included)
+Place a script.namx file inside the assets/ folder of your project. (example documented script included)
 
 The engine will load and run the script each frame, updating the controlled object's position accordingly.
