@@ -1,0 +1,9 @@
+// Add three colored boxes
+box 100 100 40 green
+box 200 150 40 red
+box 300 200 40 blue
+
+// Show text on screen
+text = "Welcome to Namling Engine!"
+text_x = 20
+text_y = 20
