@@ -1,0 +1,10 @@
+// Create three colored boxes
+box 100 100 40 green
+box 200 200 40 red
+box 300 300 40 blue
+
+// Check for win condition
+if box_count == 0 then win = 1
+if win == 1 then text = "YOU WIN"
+if win == 1 then text_x = 300
+if win == 1 then text_y = 20
