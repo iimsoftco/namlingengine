@@ -1,4 +1,4 @@
-[![forks so far](https://github.com/iimsoftco/namlingengine/actions/workflows/c-cpp.yml/badge.svg?branch=main&event=fork)](https://github.com/iimsoftco/namlingengine/actions/workflows/c-cpp.yml)
+[![forks so far](https://github.com/iimsoftco/namlingengine)
 
 # Namling Engine v2.1
 A 2D game engine based on the memes of "Namlings".
