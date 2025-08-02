@@ -36,8 +36,11 @@ speed = 150
 
 
 # Supported Statements
-Assignment: <variable> = <value>
+Assignment: 
+<variable> = <value>
 Assign a constant value or expression to a variable.
+Randomize:
+random()
 
 
 
