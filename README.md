@@ -1,4 +1,4 @@
-[forks so far](https://github.com/iimsoftco/namlingengine)
+![Static Badge](https://img.shields.io/badge/Version-2_._1-blue)
 
 # Namling Engine v2.1
 A 2D game engine based on the memes of "Namlings".
