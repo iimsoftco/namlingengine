@@ -1,4 +1,4 @@
-# Namling Engine v1.5
+# Namling Engine v2
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
