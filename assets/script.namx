@@ -1,4 +1,0 @@
-// Create three colored boxes
-box 100 100 40 green
-box 200 200 40 red
-box 300 300 40 blue
