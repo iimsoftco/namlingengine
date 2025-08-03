@@ -2,7 +2,7 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/iimsoftco/namlingengine)
 
-# Namling Engine v2.1alpha
+# Namling Engine v2.1beta
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
