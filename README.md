@@ -1,8 +1,8 @@
-![Static Badge](https://img.shields.io/badge/Version-2_._1-blue)
+
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/iimsoftco/namlingengine)
 
-# Namling Engine v2.1
+# Namling Engine v2.1alpha
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
@@ -19,41 +19,96 @@ g++ namlingengine.cpp -o engine \
 
 # Namlinx Language Documentation
 
-Namlinx is a simple, lightweight scripting language designed specifically for customizing behaviors in the Namling Engine. It enables control over game objects, like player movement, using straightforward syntax and a small set of commands.
+## 📦 Box Creation
 
-Namlinx scripts are plain text files (with .namx extension) that the engine loads and executes each frame, allowing dynamic control over variables like position and speed based on input conditions.
+box x y size color
+// Creates a box at position (x, y) with given size and color.
+// Colors: red, green, blue, etc.
+box 100 200 40 red
 
-# Key Concepts
-Variables: Namlinx supports a few predefined floating-point variables:
+---
 
-x — horizontal position (e.g., player X coordinate)
+## 🧍 Thanling Placement
 
-y — vertical position (e.g., player Y coordinate)
+than x y
+// Places a "thanling" sprite at position (x, y).
+than 300 300
 
+---
 
-# Syntax
-Variable Assignment
-Set a variable’s value:
+## 🧾 Text Display
 
+text = "string"
+// Displays a string of text on screen.
 
-speed = 150
+text_x = number
+text_y = number
+// Sets the text's position.
 
+text = "YOU WIN"
+text_x = 250
+text_y = 50
 
-# Supported Statements
-## Assignment: 
-<variable> = <value>
-Assign a constant value or expression to a variable.
-## Randomize:
-random()
-## Win condition:
-win
-## Text:
-text
+---
 
+## 🧍‍♂️ Player Positioning
 
+x = number
+y = number
+// Moves the player to position (x, y)
 
+x = 400
+y = 300
 
+---
 
-Place a script.namx file inside the assets/ folder of your project. (explained and documented game script included)
+## 🔁 Conditional Execution
 
-The engine will load and run the script each frame, updating the controlled object's position accordingly.
+if a == b then command
+// Runs the command only if the condition is true.
+
+if box_count == 0 then text = "Victory!"
+
+---
+
+## 🔢 Math & Expressions
+
+// Operators:
++  addition
+-  subtraction
+*  multiplication
+/  division
+^  exponent
+
+// Functions:
+cos(expr)
+sin(expr)
+
+// Constants:
+dt         // frame time (1/60)
+random()   // random float 0–1
+
+angle = angle + dt * 2
+x = cos(angle) * 100 + 400
+
+---
+
+## 📦 Box Utilities
+
+box_count
+// Number of boxes currently active.
+
+if box_count == 0 then win = 1
+
+---
+
+## 🤖 Thanling Interaction
+
+than_collided
+// Is 1 when the player touches any thanling this frame.
+
+if than_collided == 1 then touched = touched + 1
+
+# Run the code
+
+Place a script.namx inside assets/
