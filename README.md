@@ -79,7 +79,7 @@ Namlinx is a simple scripting language designed for basic game logic integration
 
 ---
 
-## Predefined Variables (from C++ context)
+## Predefined Variables (from engine context)
 
 - `box_collided` (0 or 1) — Set when player collides with any box.
 - `than_collided` (0 or 1) — Set when player collides with any thanling.
