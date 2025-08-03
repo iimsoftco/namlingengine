@@ -2,7 +2,7 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/iimsoftco/namlingengine)
 
-# Namling Engine v2.2
+# Namling Engine v2.2ex
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
@@ -17,106 +17,81 @@ You can redistribute, modify and do basically anything but don't claim this engi
 g++ namlingengine.cpp -o engine \
     -lsfml-graphics -lsfml-window -lsfml-system
 
-# Namlinx Language Documentation
 
-## 📦 Box Creation
+# Namlinx Documentation
 
-box x y size color
-// Creates a box at position (x, y) with given size and color.
-// Colors: red, green, blue, etc.
-box 100 200 40 red
+## Overview
+
+Namlinx is a simple scripting language designed for basic game logic integration in Namling Engine. It supports variable assignments, conditional statements, object creation, and simple math operations.
 
 ---
 
-## 🧍 Thanling Placement
+## Script Structure
 
-than x y
-// Places a "thanling" sprite at position (x, y).
-than 300 300
-
----
-
-## Gimbap Placement
-
-gim x y
-// Places a "gimbap" sprite at position (x, y).
-gim 300 300
+- Scripts are .namx files.
+- Lines starting with `//` or `-` are comments and ignored.
+- Each statement or command is written on its own line.
+- Supports variable assignment, conditional execution, and commands to create game objects.
 
 ---
 
-## 🧾 Text Display
+## Variables
 
-text = "string"
-// Displays a string of text on screen.
+- Two types of variables:
+  - **Numeric variables**: Assigned with `=`, e.g., `x=10`.
+  - **String variables**: Assigned with quotes, e.g., `text="Hello"`.
 
-text_x = number
-text_y = number
-// Sets the text's position.
-
-text = "YOU WIN"
-text_x = 250
-text_y = 50
+- Variables can be used in expressions and conditions.
 
 ---
 
-## 🧍‍♂️ Player Positioning
+## Expressions
 
-x = number
-y = number
-// Moves the player to position (x, y)
-
-x = 400
-y = 300
+- Supports arithmetic operations: `+`, `-`, `*`, `/`, `^` (power).
+- Supports math functions: `sin()`, `cos()`.
+- Supports constant variables such as `dt` (delta time) and `random()` (random float between 0 and 1).
+- Variables can be combined to form expressions, e.g., `x = 5 + 3 * random()`.
 
 ---
 
-## 🔁 Conditional Execution
+## Commands
 
-if a == b then command
-// Runs the command only if the condition is true.
+### Object Creation
 
-if box_count == 0 then text = "Victory!"
+- `box x y size color`  
+  Creates a rectangular box at `(x, y)` with given `size` and `color`.
 
----
+- `than x y`  
+  Creates a thanling sprite at `(x, y)`.
 
-## 🔢 Math & Expressions
-
-// Operators:
-+  addition
--  subtraction
-*  multiplication
-/  division
-^  exponent
-
-// Functions:
-cos(expr)
-sin(expr)
-
-// Constants:
-dt         // frame time (1/60)
-random()   // random float 0–1
-
-angle = angle + dt * 2
-x = cos(angle) * 100 + 400
+- `gim x y`  
+  Creates a gimbap sprite at `(x, y)`.
 
 ---
 
-## 📦 Box Utilities
+## Conditional Statements
 
-box_count
-// Number of boxes currently active.
+- Syntax:  
+  `variable == value then <statement>`  
+  Executes `<statement>` if the variable equals the value.
 
-if box_count == 0 then win = 1
+- Supports simple equality checks for control flow.
 
 ---
 
-## 🤖 Thanling Interaction
+## Predefined Variables (from C++ context)
 
-than_collided
-// Is 1 when the player touches any thanling this frame.
+- `box_collided` (0 or 1) — Set when player collides with any box.
+- `than_collided` (0 or 1) — Set when player collides with any thanling.
+- `gim_collided` (0 or 1) — Set when player collides with any gimbap.
+- `box_count` (number) — Current number of boxes remaining.
+- `than_count` (number) — Current number of thanlings remaining.
+- `gim_count` (number) — Current number of gimbaps remaining.
+- `dt` — Delta time, useful for frame-based calculations.
+- `random()` — Returns a random float between 0 and 1.
 
-if than_collided == 1 then touched = touched + 1
+---
 
-# Run the code
+## Example Script
 
-Place a script.namx inside assets/
+A documented Namlinx script is included in assets/ folder.
