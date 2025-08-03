@@ -2,7 +2,7 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/iimsoftco/namlingengine)
 
-# Namling Engine v2.1beta
+# Namling Engine v2.2
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
@@ -33,6 +33,14 @@ box 100 200 40 red
 than x y
 // Places a "thanling" sprite at position (x, y).
 than 300 300
+
+---
+
+## Gimbap Placement
+
+gim x y
+// Places a "gimbap" sprite at position (x, y).
+gim 300 300
 
 ---
 
