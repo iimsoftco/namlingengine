@@ -1,0 +1,20 @@
+// Place 3 boxes
+box 100 120 50
+box 400 200 45
+box 650 320 40
+
+
+// Place 3 Gimbaps
+gim 50 100
+gim 58 200
+gim 100 295
+
+// Place 3 Thanlings
+than 100 100
+than 20 59
+than 90 34
+
+// Example text
+text = "Namling Engine"
+text_x = 15
+text_y = 80
