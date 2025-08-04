@@ -2,7 +2,7 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/iimsoftco/namlingengine)
 
-# Namling Engine v2.2ex
+# Namling Engine v2.3
 A 2D game engine based on the memes of "Namlings".
 ## Features:
 ### Namlinx coding support - make your own game easily and fast!
@@ -22,76 +22,124 @@ g++ namlingengine.cpp -o engine \
 
 ## Overview
 
-Namlinx is a simple scripting language designed for basic game logic integration in Namling Engine. It supports variable assignments, conditional statements, object creation, and simple math operations.
+Namlinx is a simple scripting language designed to control game logic, variables, and interactions within the **Namling Engine**.
 
 ---
 
-## Script Structure
+## Syntax and Features
 
-- Scripts are .namx files.
-- Lines starting with `//` or `-` are comments and ignored.
-- Each statement or command is written on its own line.
-- Supports variable assignment, conditional execution, and commands to create game objects.
+### Variable Assignment
 
----
+Assign values to variables using `=`:
 
-## Variables
+x = 100
+speed = 5 * dt
 
-- Two types of variables:
-  - **Numeric variables**: Assigned with `=`, e.g., `x=10`.
-  - **String variables**: Assigned with quotes, e.g., `text="Hello"`.
 
-- Variables can be used in expressions and conditions.
+
+Variables hold numeric values.
 
 ---
 
-## Expressions
+### Conditional Statements
 
-- Supports arithmetic operations: `+`, `-`, `*`, `/`, `^` (power).
-- Supports math functions: `sin()`, `cos()`.
-- Supports constant variables such as `dt` (delta time) and `random()` (random float between 0 and 1).
-- Variables can be combined to form expressions, e.g., `x = 5 + 3 * random()`.
+Use equality checks with `==` and `then` to run conditional logic:
 
----
+box_collided == 1 then speed = 0
 
-## Commands
 
-### Object Creation
-
-- `box x y size color`  
-  Creates a rectangular box at `(x, y)` with given `size` and `color`.
-
-- `than x y`  
-  Creates a thanling sprite at `(x, y)`.
-
-- `gim x y`  
-  Creates a gimbap sprite at `(x, y)`.
 
 ---
 
-## Conditional Statements
+### Arithmetic Expressions
 
-- Syntax:  
-  `variable == value then <statement>`  
-  Executes `<statement>` if the variable equals the value.
+Supports basic arithmetic operators: `+`, `-`, `*`, `/`, `^`
 
-- Supports simple equality checks for control flow.
+Examples:
 
----
+distance = speed * dt
+angle = sin(angle_rad)
 
-## Predefined Variables (from engine context)
 
-- `box_collided` (0 or 1) — Set when player collides with any box.
-- `than_collided` (0 or 1) — Set when player collides with any thanling.
-- `gim_collided` (0 or 1) — Set when player collides with any gimbap.
-- `box_count` (number) — Current number of boxes remaining.
-- `than_count` (number) — Current number of thanlings remaining.
-- `gim_count` (number) — Current number of gimbaps remaining.
-- `dt` — Delta time, useful for frame-based calculations.
-- `random()` — Returns a random float between 0 and 1.
+
+Built-in functions: `sin()`, `cos()`, `random()`
 
 ---
 
-## Example Script
+### Supported Variables
 
-A documented Namlinx script is included in assets/ folder.
+- `dt` — Delta time (time elapsed per frame)
+- `random()` — Generates a random float between 0 and 1
+
+---
+
+### Game-related Variables
+
+- `box_collided`, `than_collided`, `gim_collided` — Collision flags set by the Namling Engine (0 or 1)
+- `box_count`, `than_count`, `gim_count` — Number of remaining objects in the game
+
+---
+
+### Game Objects Variables
+
+Define positions and sizes of objects:
+
+- Boxes:
+box0_x = 100
+box0_y = 100
+box0_w = 50
+box0_h = 50
+
+
+- Thanlings:
+than0_x = 300
+than0_y = 200
+
+
+- Gimbaps:
+gim0_x = 500
+gim0_y = 400
+
+
+
+---
+
+### Example Script
+
+box0_x = 100
+box0_y = 100
+box0_w = 50
+box0_h = 50
+box_count = 1
+
+than0_x = 300
+than0_y = 200
+than_count = 1
+
+gim0_x = 500
+gim0_y = 400
+gim_count = 1
+
+box_collided == 1 then box_count = box_count - 1
+than_collided == 1 then than_count = than_count - 1
+gim_collided == 1 then gim_count = gim_count - 1
+
+
+
+
+
+---
+
+## Notes
+
+- Each command should be on its own line.
+- Variables are dynamically created when assigned.
+- The Namling Engine runs the interpreter every frame, updating variables and logic.
+- Collision flags and object counts are managed by the Namling Engine and exposed to the script.
+
+---
+
+## Summary
+
+Namlinx provides simple scripting to handle game logic with variables, conditionals, arithmetic, and built-in functions, allowing easy interaction with game objects (boxes, thanlings, gimbaps) and states within the Namling Engine.
+A script.namx should be placed inside the assets/ folder.
