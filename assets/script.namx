@@ -1,0 +1,13 @@
+box0_x = 100
+box0_y = 100
+box0_w = 50
+box0_h = 50
+box_count = 1
+
+gim0_x = 300
+gim0_y = 100
+gim_count = 1
+
+than0_x = 500
+than0_y = 100
+than_count = 1
